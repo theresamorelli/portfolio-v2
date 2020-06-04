@@ -9,7 +9,7 @@ interface Social {
 }
 
 interface FooterProps {
-  logo: React.ReactNode;
+  logo?: React.ReactNode;
   social: Social[];
 }
 
@@ -25,8 +25,6 @@ const Content = styled.div`
   justify-content: space-between;
 
   padding: 40px 0;
-
-  border-bottom: 10px solid #8effbf;
 `;
 
 const List = styled.ul`
@@ -43,14 +41,10 @@ const ListItem = styled.li`
   }
 `;
 
-export const Footer = ({ logo, social }: FooterProps) => (
+export const Footer = ({ social }: FooterProps) => (
   <FooterRoot>
     <Container>
       <Content>
-        <a href="https://ueno.co" target="_blank" rel="noopener noreferrer">
-          {logo}
-        </a>
-
         <List>
           {social.map((item) => (
             <ListItem key={item.to}>

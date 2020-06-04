@@ -14,8 +14,6 @@ interface IntroProps {
 const Wrapper = styled.div`
   padding: 60px 0;
 
-  border-bottom: 1px solid #e5e5e5;
-
   @media (min-width: ${breakpoints.md}) {
     padding: 120px 0;
   }
