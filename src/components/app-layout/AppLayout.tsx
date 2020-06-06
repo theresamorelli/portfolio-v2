@@ -38,8 +38,8 @@ export default ({ children }: AppLayoutProps) => (
 
       <Footer
         social={[
-          { icon: <Github />, to: 'https://github.com/ueno-llc' },
-          { icon: <Linkedin />, to: 'https://www.linkedin.com/company/ueno' },
+          { icon: <Github />, to: 'https://github.com/theresamorelli' },
+          { icon: <Linkedin />, to: 'https://www.linkedin.com/in/theresa-morelli' },
         ]}
       />
 

@@ -14,15 +14,12 @@ interface FooterProps {
 }
 
 const FooterRoot = styled.div`
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  padding: 40px 0;
 `;
 
 const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   padding: 40px 0;
 `;

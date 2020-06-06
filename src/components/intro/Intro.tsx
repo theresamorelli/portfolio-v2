@@ -8,32 +8,48 @@ import { Column } from 'components/grid/Column';
 import { Row } from 'components/grid/Row';
 
 interface IntroProps {
-  children: ReactNode;
+  name: string;
+  title: string;
 }
 
 const Wrapper = styled.div`
   padding: 60px 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   @media (min-width: ${breakpoints.md}) {
-    padding: 120px 0;
+    /* padding: 120px 0; */
   }
 `;
 
-const Paragraph = styled.p`
+export const Title = styled.h4`
+  ${responsiveFont(30, 40)};
+
+  font-family: ${variables.font.familyHeading};
+  font-weight: 300;
+`;
+
+export const Paragraph = styled.p`
   ${responsiveFont(26, 32)};
 
   font-family: ${variables.font.familyHeading};
   font-weight: 300;
 `;
 
-export const Intro = ({ children }: IntroProps) => (
-  <Container>
-    <Wrapper>
-      <Row>
-        <Column md={7}>
-          <Paragraph>{children}</Paragraph>
-        </Column>
-      </Row>
-    </Wrapper>
-  </Container>
-);
+export const Intro = ({ name, title }: IntroProps) => {
+  return (
+    <Container>
+      <Wrapper>
+        <Row>
+          <Column md={12}>
+            <Title>{name}</Title>
+            <Paragraph>{title}</Paragraph>
+          </Column>
+        </Row>
+      </Wrapper>
+    </Container>
+  );
+};

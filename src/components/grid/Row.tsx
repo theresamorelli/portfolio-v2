@@ -21,4 +21,8 @@ export const Row = styled.div<RowProps>`
 
   margin-left: ${(props) => math(`${props.gutter || variables.gutter}/-2px`)};
   margin-right: ${(props) => math(`${props.gutter || variables.gutter}/-2px`)};
+
+  @media (min-width: ${variables.breakpoints.sm}) {
+    flex-direction: column;
+  }
 `;
