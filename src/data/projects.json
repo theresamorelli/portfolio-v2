@@ -1,0 +1,53 @@
+[
+  {
+    "title": "The Wally Shop",
+    "subtitle": "Reusable packaging e-commerce platform for sustainable grocery shopping",
+    "description": "",
+    "tech": "React, MobX, MaterialUI, Slick carousel",
+    "liveLink": "https://thewallyshop.co",
+    "imageName": "wallyshop"
+  },
+  {
+    "title": "Sixcycle",
+    "subtitle": "Provider of coaching / training software for Team in Training",
+    "description": "",
+    "tech": "React, JavaScript, custom CSS",
+    "liveLink": "https://sixcycle.com",
+    "imageName": "sixcycle"
+  },
+  {
+    "title": "Hello Pizza Truck",
+    "subtitle": "Promotional website for food truck business sale",
+    "description": "",
+    "tech": "React, Gatsby, Slick carousel",
+    "liveLink": "https://hellopizzatruck.com",
+    "githubLink": "https://github.com/theresamorelli/hello-pizza-truck",
+    "imageName": "hellopizzatruck"
+  },
+  {
+    "title": "Byte Poet",
+    "subtitle": "Digital magnetic poetry",
+    "description": "",
+    "tech": "React, TypeScript, Styled Components",
+    "liveLink": "https://inspiring-colden-24c655.netlify.app",
+    "githubLink": "https://github.com/theresamorelli/byte-poet",
+    "imageName": "bytepoet"
+  },
+  {
+    "title": "Newsmash",
+    "subtitle": "News aggregator and data visualization",
+    "description": "",
+    "tech": "React, Ruby on Rails",
+    "liveLink": "http://newsmashed.herokuapp.com",
+    "githubLink": "https://github.com/theresamorelli/newsmash-web",
+    "imageName": "newsmash"
+  },
+  {
+    "title": "Refood",
+    "subtitle": "Platform for food redistribution",
+    "description": "",
+    "tech": "JavaScript, Ruby on Rails",
+    "githubLink": "https://github.com/theresamorelli/refood-with-js",
+    "imageName": "refood"
+  }
+]

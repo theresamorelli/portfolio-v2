@@ -41,7 +41,7 @@ const getMargin = ({ offset }: TTheme) => {
 };
 
 const columnStyles = (props: TTheme) => css`
-  align-self: ${props.align || 'stretch'};
+  align-self: ${props.align || 'center'};
 
   padding-left: ${math(`${props.gutter || variables.gutter} / 2px`)};
   padding-right: ${math(`${props.gutter || variables.gutter} / 2px`)};
