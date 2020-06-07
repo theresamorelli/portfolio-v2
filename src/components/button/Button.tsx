@@ -1,13 +1,14 @@
 import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
-import { Link } from 'components/link/Link';
+import { ILink, ELink } from 'components/link/Link';
 
 import { variables } from 'styles/variables';
 
 interface ButtonProps {
   children: ReactNode;
   href?: string;
+  download?: boolean;
   onClick?(): void;
 }
 
@@ -46,9 +47,10 @@ const Btn = styled.button`
   ${base};
 `;
 
-export const Button = ({ children, href, onClick }: ButtonProps) => {
+export const Button = ({ children, href, download, onClick }: ButtonProps) => {
   const isLink = typeof href !== 'undefined';
   const isExternal = isLink && /^((https?:)?\/\/|[0-9a-zA-Z]+:)/.test(href || '');
+  const isDownload = !!download;
 
   if (isExternal) {
     return (
@@ -60,9 +62,17 @@ export const Button = ({ children, href, onClick }: ButtonProps) => {
 
   if (isLink) {
     return (
-      <Link to={href || '#'}>
+      <ILink to={href || '#'}>
         <Lnk>{children}</Lnk>
-      </Link>
+      </ILink>
+    );
+  }
+
+  if (isDownload) {
+    return (
+      <ELink href={href || '#'} download={true}>
+        <Btn>{children}</Btn>
+      </ELink>
     );
   }
 

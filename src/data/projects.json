@@ -3,26 +3,26 @@
     "title": "The Wally Shop",
     "subtitle": "Reusable packaging e-commerce platform for sustainable grocery shopping",
     "description": "",
-    "tech": "React, MobX, MaterialUI, Slick carousel",
+    "tech": "React, MobX, MaterialUI",
     "liveLink": "https://thewallyshop.co",
-    "imageName": "wallyshop"
+    "imageName": "wallyshop-screenshot.png"
   },
   {
     "title": "Sixcycle",
     "subtitle": "Provider of coaching / training software for Team in Training",
     "description": "",
-    "tech": "React, JavaScript, custom CSS",
+    "tech": "React, JavaScript, custom state management",
     "liveLink": "https://sixcycle.com",
-    "imageName": "sixcycle"
+    "imageName": "sixcycle-screenshot.png"
   },
   {
     "title": "Hello Pizza Truck",
-    "subtitle": "Promotional website for food truck business sale",
+    "subtitle": "Informational website for selling a food truck business",
     "description": "",
-    "tech": "React, Gatsby, Slick carousel",
-    "liveLink": "https://hellopizzatruck.com",
+    "tech": "React, Gatsby, Reveal, Slick carousel",
+    "liveLink": "https://www.hellopizzatruck.com",
     "githubLink": "https://github.com/theresamorelli/hello-pizza-truck",
-    "imageName": "hellopizzatruck"
+    "imageName": "hellopizzatruck-screenshot.png"
   },
   {
     "title": "Byte Poet",
@@ -31,23 +31,32 @@
     "tech": "React, TypeScript, Styled Components",
     "liveLink": "https://inspiring-colden-24c655.netlify.app",
     "githubLink": "https://github.com/theresamorelli/byte-poet",
-    "imageName": "bytepoet"
+    "imageName": "bytepoet-screenshot.png"
   },
   {
     "title": "Newsmash",
     "subtitle": "News aggregator and data visualization",
     "description": "",
     "tech": "React, Ruby on Rails",
-    "liveLink": "http://newsmashed.herokuapp.com",
+    "liveLink": "http://newsmashed.herokuapp.com/mixes",
     "githubLink": "https://github.com/theresamorelli/newsmash-web",
-    "imageName": "newsmash"
+    "imageName": "newsmash-screenshot.png"
   },
   {
     "title": "Refood",
-    "subtitle": "Platform for food redistribution",
+    "subtitle": "Platform for sharing extra food",
     "description": "",
     "tech": "JavaScript, Ruby on Rails",
     "githubLink": "https://github.com/theresamorelli/refood-with-js",
-    "imageName": "refood"
+    "imageName": "refood-screenshot.png"
+  },
+  {
+    "title": "Svelte Resume",
+    "subtitle": "Flexible PDF resume template",
+    "description": "",
+    "downloadLink": "assets/pdf/TMorelli_Resume.pdf",
+    "githubLink": "https://github.com/theresamorelli/svelte-resume",
+    "imageName": "svelteresume-screenshot.png",
+    "hideTopbar": true
   }
 ]
