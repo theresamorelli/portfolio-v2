@@ -1,7 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
+
+import Screenshot from 'components/projects/Screenshot';
 import { Column } from 'components/grid/Column';
 import { Row } from 'components/grid/Row';
-import styled from 'styled-components';
 
 interface ProjectProps {
   title: string;
@@ -14,7 +16,7 @@ interface ProjectProps {
 }
 
 const Project = styled.div`
-  margin: 100px 0;
+  margin: 70px 0;
 `;
 
 const ColumnVertCenter = styled(Column)`
@@ -24,21 +26,8 @@ const ColumnVertCenter = styled(Column)`
 const Title = styled.div`
   font-size: 1.4rem;
 `;
-const Screenshot = styled.img`
-  -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-`;
 
-export default ({
-  title,
-  subtitle,
-  description,
-  tech,
-  liveLink,
-  githubLink,
-  imageName,
-}: ProjectProps) => {
+export default ({ title, subtitle, description, tech, liveLink, githubLink, imageName }: ProjectProps) => {
   return (
     <Project>
       <Row>
@@ -49,10 +38,7 @@ export default ({
           <div>Technologies: {tech}</div>
         </ColumnVertCenter>
         <Column sm={12} md={6}>
-          <Screenshot
-            src={require(`assets/images/${imageName}-screenshot.png`)}
-            alt={`${title} screenshot`}
-          ></Screenshot>
+          <Screenshot imageName={imageName} title={title} />
         </Column>
       </Row>
     </Project>
