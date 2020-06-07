@@ -10,10 +10,12 @@ interface ProjectProps {
   title: string;
   subtitle: string;
   description: string;
-  tech: string;
+  tech?: string;
   liveLink?: string;
+  downloadLink?: string;
   githubLink?: string;
   imageName: string;
+  hideTopbar?: boolean;
 }
 
 const Project = styled.div`
@@ -48,8 +50,10 @@ export default ({
   description,
   tech,
   liveLink,
+  downloadLink,
   githubLink,
   imageName,
+  hideTopbar,
 }: ProjectProps) => {
   return (
     <Project>
@@ -63,11 +67,16 @@ export default ({
           </InfoWrapper>
           <ButtonsWrapper>
             {liveLink && <Button href={liveLink}>Live</Button>}
+            {/* {downloadLink && (
+              <Button href={downloadLink} download>
+                Download my resume
+              </Button>
+            )} */}
             {githubLink && <Button href={githubLink}>Github</Button>}
           </ButtonsWrapper>
         </ColumnVertCenter>
         <Column sm={12} md={6} lg={5}>
-          <Screenshot imageName={imageName} title={title} />
+          <Screenshot imageName={imageName} title={title} hideTopbar={hideTopbar} />
         </Column>
       </Row>
     </Project>

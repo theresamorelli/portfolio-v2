@@ -4,6 +4,7 @@ import styled from 'styled-components';
 interface ScreenshotProps {
   imageName: string;
   title: string;
+  hideTopbar?: boolean;
 }
 
 const Screenshot = styled.div`
@@ -50,13 +51,15 @@ const TopFakeButton = styled.i`
   }
 `;
 
-export default ({ title, imageName }: ScreenshotProps) => {
+export default ({ title, imageName, hideTopbar }: ScreenshotProps) => {
   return (
     <Screenshot>
-      <TopBar>
-        <TopFakeButton />
-      </TopBar>
-      <img src={require(`assets/images/${imageName}-screenshot.png`)} alt={`${title} screenshot`} />
+      {!hideTopbar && (
+        <TopBar>
+          <TopFakeButton />
+        </TopBar>
+      )}
+      <img src={require(`assets/images/${imageName}`)} alt={`${title} screenshot`} />
     </Screenshot>
   );
 };
