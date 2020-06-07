@@ -21,6 +21,8 @@ const Projects = () => {
           subtitle={project.subtitle}
           description={project.description}
           tech={project.tech}
+          liveLink={project.liveLink}
+          githubLink={project.githubLink}
           imageName={project.imageName}
           key={i}
         />

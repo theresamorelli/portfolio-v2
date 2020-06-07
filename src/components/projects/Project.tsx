@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Screenshot from 'components/projects/Screenshot';
 import { Column } from 'components/grid/Column';
 import { Row } from 'components/grid/Row';
+import { Button } from 'components/button/Button';
 
 interface ProjectProps {
   title: string;
@@ -16,28 +17,56 @@ interface ProjectProps {
 }
 
 const Project = styled.div`
-  margin: 70px 0;
+  margin: 100px 0;
 `;
 
 const ColumnVertCenter = styled(Column)`
   align-self: center;
 `;
 
-const Title = styled.div`
-  font-size: 1.4rem;
+const InfoWrapper = styled.div`
+  margin: 30px 0;
 `;
 
-export default ({ title, subtitle, description, tech, liveLink, githubLink, imageName }: ProjectProps) => {
+const ButtonsWrapper = styled.div`
+  margin: 30px 0;
+`;
+
+const Title = styled.div`
+  margin: 7px 0;
+  font-size: 1.5rem;
+`;
+
+const Subtitle = styled.div`
+  margin: 10px 0 20px;
+  font-size: 1.1rem;
+`;
+
+export default ({
+  title,
+  subtitle,
+  description,
+  tech,
+  liveLink,
+  githubLink,
+  imageName,
+}: ProjectProps) => {
   return (
     <Project>
       <Row>
-        <ColumnVertCenter sm={12} md={6}>
-          <Title>{title}</Title>
-          <div>{subtitle}</div>
-          <div>{description}</div>
-          <div>Technologies: {tech}</div>
+        <ColumnVertCenter sm={12} md={6} lg={5}>
+          <InfoWrapper>
+            <Title>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+            <div>{description}</div>
+            <div>{tech}</div>
+          </InfoWrapper>
+          <ButtonsWrapper>
+            {liveLink && <Button href={liveLink}>Live</Button>}
+            {githubLink && <Button href={githubLink}>Github</Button>}
+          </ButtonsWrapper>
         </ColumnVertCenter>
-        <Column sm={12} md={6}>
+        <Column sm={12} md={6} lg={5}>
           <Screenshot imageName={imageName} title={title} />
         </Column>
       </Row>

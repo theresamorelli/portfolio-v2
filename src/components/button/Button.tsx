@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
-import { lighten } from 'polished';
-import Link from 'next/link';
+import { darken } from 'polished';
+import { Link } from 'components/link/Link';
 
 import { variables } from 'styles/variables';
 
@@ -28,13 +28,13 @@ const base = css`
   line-height: 40px;
   vertical-align: middle;
 
-  background-color: #000;
+  background-color: #343a40;
   color: #fff;
 
   transition: background-color 180ms ease;
 
   &:hover {
-    background-color: ${lighten(0.25, '#000')};
+    background-color: ${darken(0.25, '#343a40')};
   }
 `;
 
@@ -60,7 +60,7 @@ export const Button = ({ children, href, onClick }: ButtonProps) => {
 
   if (isLink) {
     return (
-      <Link href={href || '#'}>
+      <Link to={href || '#'}>
         <Lnk>{children}</Lnk>
       </Link>
     );
