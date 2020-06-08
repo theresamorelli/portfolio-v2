@@ -9,7 +9,7 @@
   },
   {
     "title": "Sixcycle",
-    "subtitle": "Provider of coaching / training software for Team in Training",
+    "subtitle": "Coaching / training software for the Leukemia and Lymphoma Society's fundraising program",
     "description": "",
     "tech": "React, JavaScript, custom state management",
     "liveLink": "https://sixcycle.com",
@@ -57,6 +57,6 @@
     "downloadLink": "assets/pdf/TMorelli_Resume.pdf",
     "githubLink": "https://github.com/theresamorelli/svelte-resume",
     "imageName": "svelteresume-screenshot.png",
-    "hideTopbar": true
+    "hideTopBar": true
   }
 ]

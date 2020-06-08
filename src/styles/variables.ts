@@ -15,8 +15,8 @@ export const variables = {
 
   // fonts
   font: {
-    family: '"Roboto", sans-serif',
-    familyHeading: '"Open Sans", sans-serif',
+    family: '"Open Sans", sans-serif',
+    familyHeading: '"Fredericka the Great", "Open Sans", sans-serif',
     size: '16px',
     sizeMin: '13px',
     lineHeight: 1.5,

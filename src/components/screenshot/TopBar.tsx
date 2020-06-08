@@ -1,19 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface ScreenshotProps {
-  imageName: string;
-  title: string;
-  hideTopbar?: boolean;
-}
-
-const Screenshot = styled.div`
-  border-radius: 3px 0;
-  -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 10px 20px -2px rgba(0, 0, 0, 0.5);
-`;
-
 const TopBar = styled.div`
   width: 100%;
   background-color: #ddd;
@@ -51,15 +38,8 @@ const TopFakeButton = styled.i`
   }
 `;
 
-export default ({ title, imageName, hideTopbar }: ScreenshotProps) => {
-  return (
-    <Screenshot>
-      {!hideTopbar && (
-        <TopBar>
-          <TopFakeButton />
-        </TopBar>
-      )}
-      <img src={require(`assets/images/${imageName}`)} alt={`${title} screenshot`} />
-    </Screenshot>
-  );
-};
+export default () => (
+  <TopBar>
+    <TopFakeButton />
+  </TopBar>
+);

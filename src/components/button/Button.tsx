@@ -41,6 +41,10 @@ const base = css`
 
 const Lnk = styled.a`
   ${base}
+
+  :last-of-type {
+    margin-right: 0;
+  }
 `;
 
 const Btn = styled.button`

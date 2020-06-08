@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Project from 'components/projects/Project';
+import Title from 'components/title/Title';
 import { Container } from 'components/container/Container';
-import { Title } from 'components/intro/Intro';
 
 import projects from 'data/projects.json';
 
@@ -25,7 +25,7 @@ const Projects = () => {
           downloadLink={project.downloadLink}
           githubLink={project.githubLink}
           imageName={project.imageName}
-          hideTopbar={project.hideTopbar}
+          hideTopBar={project.hideTopBar}
           key={i}
         />
       ))}
