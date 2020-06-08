@@ -1,10 +1,9 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { responsiveFont } from 'styles/utils';
 import { variables, breakpoints } from 'styles/variables';
 import { Container } from 'components/container/Container';
-import { Column } from 'components/grid/Column';
 import { Row } from 'components/grid/Row';
 
 interface IntroProps {
@@ -30,6 +29,8 @@ export const Title = styled.h4`
 
   font-family: ${variables.font.familyHeading};
   font-weight: 300;
+
+  margin: 30px 0;
 `;
 
 export const Paragraph = styled.p`
@@ -44,10 +45,10 @@ export const Intro = ({ name, title }: IntroProps) => {
     <Container>
       <Wrapper>
         <Row>
-          <Column md={12}>
+          <div>
             <Title>{name}</Title>
             <Paragraph>{title}</Paragraph>
-          </Column>
+          </div>
         </Row>
       </Wrapper>
     </Container>

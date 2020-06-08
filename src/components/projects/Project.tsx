@@ -50,7 +50,7 @@ export default ({
   description,
   tech,
   liveLink,
-  downloadLink,
+  // downloadLink,
   githubLink,
   imageName,
   hideTopbar,
@@ -75,7 +75,7 @@ export default ({
             {githubLink && <Button href={githubLink}>Github</Button>}
           </ButtonsWrapper>
         </ColumnVertCenter>
-        <Column sm={12} md={6} lg={5}>
+        <Column sm={12} md={6} lg={7}>
           <Screenshot imageName={imageName} title={title} hideTopbar={hideTopbar} />
         </Column>
       </Row>

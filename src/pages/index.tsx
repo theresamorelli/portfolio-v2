@@ -9,7 +9,7 @@ export default () => (
   <>
     <Helmet title="Theresa Morelli" />
 
-    <Intro name="Theresa" title="Developer, explorer, creator"></Intro>
+    <Intro name="Theresa Morelli" title="developer, explorer, creator"></Intro>
 
     <Projects />
   </>

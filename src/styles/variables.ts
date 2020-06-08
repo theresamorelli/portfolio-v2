@@ -32,7 +32,7 @@ export const variables = {
 
   // breakpoints
   breakpoints: {
-    sm: { width: '420px', gutter: '30px' }, //  mobile
+    sm: { width: '200px', gutter: '30px' }, //  mobile
     md: { width: '720px', gutter: '50px' }, //  tablet
     lg: { width: '1080px', gutter: '70px' }, // desktop
   } as {
