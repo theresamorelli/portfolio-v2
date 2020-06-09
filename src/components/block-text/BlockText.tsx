@@ -31,12 +31,10 @@ const Heading = styled.h3`
 const Description = styled.p`
   ${responsiveFont(16, 18)}
 
-  font-weight: 300;
   line-height: ${26 / 16};
 
   a {
     text-decoration: none;
-    font-weight: 400;
 
     color: #000;
     transition: 200ms opacity ease-in-out;

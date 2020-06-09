@@ -1,7 +1,7 @@
 import { math } from 'polished';
 import styled, { css } from 'styled-components';
 
-import { breakpoints, variables } from 'styles/variables';
+import { variables } from 'styles/variables';
 
 const breakpointStyles = (key: string) => () => {
   const { width, gutter } = variables.breakpoints[key];
@@ -22,7 +22,7 @@ export const Container = styled.div`
   max-width: ${math(`${variables.pageWidth} + ${variables.gutter}`)};
 
   @media (min-width: 800px) {
-    padding: 0 10% 10vh;
+    padding: 5vh 10% 5vh;
   }
   @media (max-width: 500px) {
     padding: 0 20px 100px;

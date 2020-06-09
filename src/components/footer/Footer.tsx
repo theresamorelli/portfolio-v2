@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Container } from 'components/container/Container';
+import { ELink } from 'components/link/Link';
 
 interface Social {
-  icon: React.ReactNode;
+  icon: string;
   to: string;
 }
 
@@ -20,8 +21,6 @@ const FooterRoot = styled.div`
 const Content = styled.div`
   display: flex;
   justify-content: center;
-
-  padding: 40px 0;
 `;
 
 const List = styled.ul`
@@ -36,6 +35,25 @@ const ListItem = styled.li`
   &:hover {
     opacity: 0.5;
   }
+
+  :first-of-type {
+    margin: 0;
+  }
+`;
+
+const SocialLink = styled(ELink)`
+  :hover {
+    background: none;
+  }
+`;
+
+const Icon = styled.i`
+  color: #9ea0a6;
+  font-size: 1.8rem;
+
+  :hover {
+    background: none;
+  }
 `;
 
 export const Footer = ({ social }: FooterProps) => (
@@ -45,9 +63,9 @@ export const Footer = ({ social }: FooterProps) => (
         <List>
           {social.map((item) => (
             <ListItem key={item.to}>
-              <a href={item.to} target="_blank" rel="noopener noreferrer">
-                {item.icon}
-              </a>
+              <SocialLink href={item.to} target="_blank" rel="noopener noreferrer">
+                <Icon className={item.icon} />
+              </SocialLink>
             </ListItem>
           ))}
         </List>

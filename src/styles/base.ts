@@ -56,6 +56,8 @@ export const Styles = createGlobalStyle`
 
     font-family: ${variables.font.family};
     line-height: ${variables.font.lineHeight};
+    font-weight: ${variables.font.weight};
+
     /* iOS on orientation change */
     text-size-adjust: 100%;
 
@@ -76,5 +78,20 @@ export const Styles = createGlobalStyle`
       opacity: 1;
       color: ${variables.colors.placeholder};
     }
+  }
+
+  a {
+    padding: 0 7px;
+    color: black;
+    text-decoration-color: #FF3722;
+
+    transition: color 0.4s;
+    transition: background 0.4s;
+  }
+
+  a:hover {
+    background: #FF3722;
+    color: white;
+    text-decoration: none;
   }
 `;

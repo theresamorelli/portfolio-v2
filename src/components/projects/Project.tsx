@@ -59,16 +59,14 @@ const Title = styled.div`
 const Subtitle = styled.div`
   margin: 10px 0 20px;
   font-size: ${responsiveFont(20, 25)};
-  font-weight: 300;
 `;
 
 const Description = styled.div`
-  font-weight: 300;
+
 `;
 
 const Tech = styled.div`
   font-size: ${responsiveFont(16, 20)};
-  font-weight: 300;
 `;
 
 export default ({

@@ -19,6 +19,7 @@ export const variables = {
     familyHeading: '"Fredericka the Great", "Open Sans", sans-serif',
     size: '16px',
     sizeMin: '13px',
+    weight: 300,
     lineHeight: 1.5,
   },
 
@@ -45,6 +46,11 @@ export const variables = {
     { height: '800px', scale: 0.95 },
     { height: '690px', scale: 0.925 },
   ],
+
+  fontAwesome: {
+    github: 'fab fa-github',
+    linkedin: 'fab fa-linkedin-in',
+  },
 };
 
 export const breakpoints = Object.entries(variables.breakpoints).reduce(
