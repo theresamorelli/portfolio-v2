@@ -10,7 +10,7 @@ interface ILinkProps {
 interface ELinkProps {
   children: React.ReactNode;
   href: string;
-  download: boolean;
+  download?: boolean;
   [key: string]: any;
 }
 

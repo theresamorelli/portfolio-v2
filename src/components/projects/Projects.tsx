@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Project from 'components/projects/Project';
 import SectionTitle from 'components/sectiontitle/SectionTitle';
@@ -9,7 +8,7 @@ import projects from 'data/projects.json';
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id="projects">
       <SectionTitle>Projects</SectionTitle>
       {projects.map((project, i) => (
         <Project

@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import { Styles } from 'styles/base';
 import { Helmet } from 'react-helmet';
 
-import Github from 'assets/svg/github.svg';
-import Linkedin from 'assets/svg/linkedin.svg';
-
 import { Footer } from 'components/footer/Footer';
 import { Devtools } from 'components/devtools/Devtools';
+
+import { variables } from 'styles/variables';
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -32,6 +31,7 @@ export default ({ children }: AppLayoutProps) => (
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
       ></link>
+      <script src="https://kit.fontawesome.com/b85d416941.js" crossorigin="anonymous"></script>
     </Helmet>
 
     <Styles />
@@ -41,8 +41,11 @@ export default ({ children }: AppLayoutProps) => (
 
       <Footer
         social={[
-          { icon: <Github />, to: 'https://github.com/theresamorelli' },
-          { icon: <Linkedin />, to: 'https://www.linkedin.com/in/theresa-morelli' },
+          { icon: variables.fontAwesome.github, to: 'https://github.com/theresamorelli' },
+          {
+            icon: variables.fontAwesome.linkedin,
+            to: 'https://www.linkedin.com/in/theresa-morelli',
+          },
         ]}
       />
 
