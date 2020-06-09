@@ -8,9 +8,6 @@ const breakpointStyles = (key: string) => () => {
 
   return css`
     @media (min-width: ${width}) {
-      padding-left: ${gutter};
-      padding-right: ${gutter};
-
       max-width: ${math(`${variables.pageWidth} + (${gutter} * 2)`)};
     }
   `;
@@ -20,13 +17,15 @@ export const Container = styled.div`
   flex-grow: 1;
 
   margin: 0 auto;
-  padding-left: ${variables.gutter};
-  padding-right: ${variables.gutter};
+  padding: 0 ${variables.gutter} 100px;
 
   max-width: ${math(`${variables.pageWidth} + ${variables.gutter}`)};
 
-  @media (min-width: ${breakpoints.sm}) {
-    max-width: ${math(`${variables.pageWidth} + ${variables.breakpoints.sm.gutter}`)};
+  @media (min-width: 800px) {
+    padding: 0 10% 10vh;
+  }
+  @media (max-width: 500px) {
+    padding: 0 20px 100px;
   }
 
   ${breakpointStyles('md')}

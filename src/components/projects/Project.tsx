@@ -7,6 +7,7 @@ import { Row } from 'components/grid/Row';
 import { Button } from 'components/button/Button';
 
 import { responsiveFont } from 'styles/utils';
+import { variables } from 'styles/variables';
 
 interface ProjectProps {
   title: string;
@@ -25,6 +26,7 @@ const Project = styled.div`
 
   @media (max-width: 719px) {
     margin: 0 0 70px;
+    min-height: 100vh;
   }
 `;
 
@@ -51,6 +53,7 @@ const ButtonsWrapper = styled.div`
 const Title = styled.div`
   margin: 7px 0;
   font-size: ${responsiveFont(30, 40)};
+  font-family: ${variables.font.familyHeading};
 `;
 
 const Subtitle = styled.div`
@@ -66,9 +69,6 @@ const Description = styled.div`
 const Tech = styled.div`
   font-size: ${responsiveFont(16, 20)};
   font-weight: 300;
-  color: #00000082;
-
-  /* margin: 40px 0; */
 `;
 
 export default ({
@@ -98,7 +98,7 @@ export default ({
                 Download my resume
               </Button>
             )} */}
-          {githubLink && <Button href={githubLink}>Github</Button>}
+          {githubLink && <Button href={githubLink}>Code</Button>}
         </ButtonsWrapper>
       </ColumnVertCenter>
       <Column sm={12} md={6} lg={7}>

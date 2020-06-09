@@ -4,12 +4,12 @@ import { responsiveFont } from 'styles/utils';
 import { variables } from 'styles/variables';
 
 export default styled.div`
-  ${responsiveFont(40, 70)};
+  ${responsiveFont(30, 70)};
 
-  font-family: ${variables.font.familyHeading};
+  font-family: ${variables.font.family};
   font-weight: 300;
 
-  margin: 30px 0;
+  margin: 0 0 30px;
 
   text-align: center;
 `;

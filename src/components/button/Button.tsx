@@ -16,7 +16,7 @@ const base = css`
   display: inline-flex;
   position: relative;
 
-  padding: 0 ${variables.gutter};
+  padding: 0 25px;
   margin-right: ${variables.gutter};
 
   height: 40px;

@@ -5,7 +5,7 @@ import { responsiveFont } from 'styles/utils';
 import { variables, breakpoints } from 'styles/variables';
 import { Container } from 'components/container/Container';
 import { Row } from 'components/grid/Row';
-import Title from 'components/title/Title';
+import Title from 'components/sectiontitle/SectionTitle';
 
 interface IntroProps {
   name: string;
@@ -25,7 +25,8 @@ const Wrapper = styled.div`
 `;
 
 const LargeTitle = styled(Title)`
-  font-size: ${responsiveFont(60, 90)};
+  font-size: ${responsiveFont(45, 70)};
+  font-family: ${variables.font.familyHeading};
 `;
 
 export const Paragraph = styled.p`
