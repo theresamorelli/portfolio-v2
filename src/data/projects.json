@@ -44,7 +44,7 @@
   },
   {
     "title": "Refood",
-    "subtitle": "Platform for sharing extra food",
+    "subtitle": "Sharing food with neighbors",
     "description": "",
     "tech": "JavaScript, Ruby on Rails",
     "githubLink": "https://github.com/theresamorelli/refood-with-js",
