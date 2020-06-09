@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Modal from 'react-modal';
 
 import Screenshot from 'components/screenshot/Screenshot';
 import { Column } from 'components/grid/Column';
@@ -61,9 +62,7 @@ const Subtitle = styled.div`
   font-size: ${responsiveFont(20, 25)};
 `;
 
-const Description = styled.div`
-
-`;
+const Description = styled.div``;
 
 const Tech = styled.div`
   font-size: ${responsiveFont(16, 20)};
@@ -79,29 +78,59 @@ export default ({
   githubLink,
   imageName,
   hideTopBar,
-}: ProjectProps) => (
-  <Project>
-    <Row>
-      <ColumnVertCenter sm={12} md={6} lg={5}>
-        <InfoWrapper>
-          <Title>{title}</Title>
-          <Subtitle>{subtitle}</Subtitle>
-          <Description>{description}</Description>
-          <Tech>{tech}</Tech>
-        </InfoWrapper>
-        <ButtonsWrapper>
-          {liveLink && <Button href={liveLink}>Live</Button>}
-          {/* {downloadLink && (
+}: ProjectProps) => {
+  const [displayModal, changeDisplayModal] = React.useState(false);
+
+  const openModal = () => {
+    changeDisplayModal(true);
+  };
+
+  const closeModal = () => {
+    changeDisplayModal(false);
+  };
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      padding: '50px',
+    },
+  };
+
+  return (
+    <Project>
+      <Row>
+        <ColumnVertCenter sm={12} md={6} lg={5}>
+          <InfoWrapper>
+            <Title>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+            <Description>{description}</Description>
+            <Tech>{tech}</Tech>
+          </InfoWrapper>
+          <ButtonsWrapper>
+            <Button onClick={openModal}>More info</Button>
+            {liveLink && <Button href={liveLink}>Live</Button>}
+            {/* {downloadLink && (
               <Button href={downloadLink} download>
                 Download my resume
               </Button>
             )} */}
-          {githubLink && <Button href={githubLink}>Code</Button>}
-        </ButtonsWrapper>
-      </ColumnVertCenter>
-      <Column sm={12} md={6} lg={7}>
-        <Screenshot imageName={imageName} title={title} hideTopBar={hideTopBar} />
-      </Column>
-    </Row>
-  </Project>
-);
+            {githubLink && <Button href={githubLink}>Code</Button>}
+          </ButtonsWrapper>
+          <Modal isOpen={displayModal} onRequestClose={closeModal} style={customStyles}>
+            <Title>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+            <Description>{description}</Description>
+          </Modal>
+        </ColumnVertCenter>
+        <Column sm={12} md={6} lg={7}>
+          <Screenshot imageName={imageName} title={title} hideTopBar={hideTopBar} />
+        </Column>
+      </Row>
+    </Project>
+  );
+};
