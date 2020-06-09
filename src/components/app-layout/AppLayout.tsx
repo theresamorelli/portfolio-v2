@@ -46,6 +46,7 @@ export default ({ children }: AppLayoutProps) => (
             icon: variables.fontAwesome.linkedin,
             to: 'https://www.linkedin.com/in/theresa-morelli',
           },
+          { icon: variables.fontAwesome.blog, to: 'https://medium.com/@theresamorelli' },
         ]}
       />
 

@@ -50,6 +50,7 @@ export const variables = {
   fontAwesome: {
     github: 'fab fa-github',
     linkedin: 'fab fa-linkedin-in',
+    blog: 'fa fa-pencil',
   },
 };
 
