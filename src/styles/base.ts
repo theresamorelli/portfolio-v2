@@ -42,6 +42,10 @@ export const Styles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  html.wf-loading * {
+     opacity: 0;
+ }
+
   /* inherited from <html> */
   *,
   *::before,
@@ -95,5 +99,11 @@ export const Styles = createGlobalStyle`
     background: #FF3722;
     color: white;
     text-decoration: none;
+  }
+
+  .shadow {
+    -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 20px -2px rgba(0, 0, 0, 0.5);
   }
 `;
