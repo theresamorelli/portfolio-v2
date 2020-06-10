@@ -23,6 +23,16 @@ const Layout = styled.div`
 export default ({ children }: AppLayoutProps) => (
   <>
     <Helmet>
+      {/* Global site tag (gtag.js) - Google Analytics */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157580455-1"></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-157580455-1');
+        `}
+      </script>
       <link
         href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@300;400&display=swap"
         rel="stylesheet"
