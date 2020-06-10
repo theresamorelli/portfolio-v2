@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Modal from 'react-modal';
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 
 import Screenshot from 'components/screenshot/Screenshot';
 import { Column } from 'components/grid/Column';
@@ -91,9 +92,10 @@ export default ({
 
   const customStyles = {
     content: {
+      maxWidth: '60%',
       top: '50%',
       left: '50%',
-      right: 'auto',
+      // right: 'auto',
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
@@ -103,16 +105,30 @@ export default ({
 
   return (
     <Project>
+      {/* <Modal
+        open={displayModal}
+        onClose={closeModal}
+        role={`More info about ${title}`}
+        // blockScroll={false}
+        // focusTrapped={false}
+        
+        // container={document.getElementById('modal-container')!}
+        // animationDuration={}
+        center
+      >
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+        <Description>{description}</Description>
+      </Modal> */}
       <Row>
         <ColumnVertCenter sm={12} md={6} lg={5}>
           <InfoWrapper>
             <Title>{title}</Title>
             <Subtitle>{subtitle}</Subtitle>
-            <Description>{description}</Description>
             <Tech>{tech}</Tech>
           </InfoWrapper>
           <ButtonsWrapper>
-            <Button onClick={openModal}>More info</Button>
+            {/* <Button onClick={openModal}>More info</Button> */}
             {liveLink && <Button href={liveLink}>Live</Button>}
             {/* {downloadLink && (
               <Button href={downloadLink} download>
@@ -121,11 +137,6 @@ export default ({
             )} */}
             {githubLink && <Button href={githubLink}>Code</Button>}
           </ButtonsWrapper>
-          <Modal isOpen={displayModal} onRequestClose={closeModal} style={customStyles}>
-            <Title>{title}</Title>
-            <Subtitle>{subtitle}</Subtitle>
-            <Description>{description}</Description>
-          </Modal>
         </ColumnVertCenter>
         <Column sm={12} md={6} lg={7}>
           <Screenshot imageName={imageName} title={title} hideTopBar={hideTopBar} />
