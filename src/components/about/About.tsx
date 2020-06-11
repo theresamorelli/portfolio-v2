@@ -3,36 +3,29 @@ import styled from 'styled-components';
 
 import Title from 'components/sectiontitle/SectionTitle';
 import { Container } from 'components/container/Container';
+import { TextContainer } from 'components/container/TextContainer';
 
 import { responsiveFont } from 'styles/utils';
 
-const About = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin: 0 auto;
-  max-width: 600px;
+const About = styled(TextContainer)`
   min-height: 100vh;
 `;
 
 const Paragraph = styled.p`
-  margin: 14px 0;
+  margin-bottom: 30px;
 
-  font-size: ${responsiveFont(14, 23)};
-  font-weight: 300;
-  line-height: ${26 / 16};
+  font-size: ${responsiveFont(16, 23)};
 
-  :first-of-type {
-    margin-top: 0;
+  @media (max-width: 500px) {
+    margin-bottom: 22px;
   }
 `;
 
 export default () => {
   return (
-    <Container>
+    <Container id="about">
       <About>
-        <Title>About</Title>
+      <Title>About</Title>
         <Paragraph>
           I'm a software engineer specializing in frontend JavaScript and React. I'm passionate
           about making the world better one line of code at a time with accessible, intuitive design
