@@ -26,7 +26,7 @@ export const Styles = createGlobalStyle`
   body {
     min-height: 100vh;
 
-    background-color: ${variables.colors.background};
+    /* background-color: ${variables.colors.background}; */
   }
 
   html {
@@ -44,6 +44,12 @@ export const Styles = createGlobalStyle`
 
   html.wf-loading * {
      opacity: 0;
+ }
+
+ html.noscroll {
+   position: fixed;
+   overflow-y: scroll;
+   width: 100%;
  }
 
   /* inherited from <html> */
@@ -101,9 +107,82 @@ export const Styles = createGlobalStyle`
     text-decoration: none;
   }
 
+canvas:after {
+  content  : "";
+  position : absolute;
+  z-index  : 1;
+  bottom   : 0;
+  left     : 0;
+  pointer-events   : none;
+  background-image : linear-gradient(to bottom, 
+                    rgba(255,255,255, 0), 
+                    rgba(255,255,255, 1) 90%);
+  width    : 100%;
+  height   : 4em;
+}
+
   .shadow {
     -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 10px 20px -2px rgba(0, 0, 0, 0.5);
   }
+
+  .p5Canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 `;

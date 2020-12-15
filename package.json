@@ -54,7 +54,7 @@
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all",
-    "printWidth": 100
+    "printWidth": 80
   },
   "dependencies": {
     "gatsby": "^2.20.24",
@@ -73,6 +73,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
+    "react-p5": "^1.3.6",
     "react-responsive-modal": "^5.0.2",
     "styled-components": "5.0.1"
   },
