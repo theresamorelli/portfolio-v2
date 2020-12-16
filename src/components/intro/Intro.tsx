@@ -9,10 +9,10 @@ import Title from 'components/sectiontitle/SectionTitle';
 import { ILink } from 'components/link/Link';
 import TreesAnimation from './TreesAnimation';
 
-interface IntroProps {
-  name: string;
-  title: string;
-}
+// interface IntroProps {
+//   name: string;
+//   title: string;
+// }
 
 const Wrapper = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 
 const LargeTitle = styled(Title)`
   font-size: ${responsiveFont(45, 70)};
-  font-family: ${variables.font.familyHeading};
+  font-family: ${variables.fonts.heading};
   /* transition: all 10s ease-in;
   text-shadow: 1px 1px grey; */
 `;
@@ -38,7 +38,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  font-family: ${variables.font.family};
+  font-family: ${variables.fonts.primary};
   font-size: ${responsiveFont(25, 33)};
 
   @media (max-width: 500px) {
@@ -46,9 +46,9 @@ const NavContainer = styled.div`
   }
 `;
 
-export const Intro: FC<IntroProps> = ({ name, title }) => {
+export const Intro: FC = () => {
   return (
-    <Container>
+    <Container id="home">
       <Wrapper>
         <Row>
           <div>

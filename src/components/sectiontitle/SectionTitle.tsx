@@ -6,6 +6,6 @@ export default styled.div`
   margin: 0 0 30px;
   text-align: center;
 
-  font-family: ${variables.font.family};
-  font-size: ${responsiveFont(35, 50)};
+  font-family: ${variables.fonts.primary};
+  font-size: ${responsiveFont(30, 42)};
 `;

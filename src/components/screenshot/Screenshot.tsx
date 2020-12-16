@@ -11,14 +11,11 @@ interface ScreenshotProps {
 
 const Screenshot = styled.div`
   border-radius: 3px 0;
-  -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 10px 20px -2px rgba(0, 0, 0, 0.5);
 `;
 
 export default ({ title, imageName, hideTopBar }: ScreenshotProps) => {
   return (
-    <Screenshot>
+    <Screenshot className="shadow">
       {!hideTopBar && <TopBar />}
       <img src={require(`assets/images/${imageName}`)} alt={`${title} screenshot`} />
     </Screenshot>

@@ -54,13 +54,13 @@ const ButtonsWrapper = styled.div`
 
 const Title = styled.div`
   margin: 7px 0;
-  font-size: ${responsiveFont(30, 40)};
-  font-family: ${variables.font.familyHeading};
+  font-size: ${responsiveFont(26, 36)};
+  font-family: ${variables.fonts.heading};
 `;
 
 const Subtitle = styled.div`
   margin: 10px 0 20px;
-  font-size: ${responsiveFont(20, 25)};
+  font-size: ${responsiveFont(16, 20)};
 `;
 
 const Description = styled.div``;

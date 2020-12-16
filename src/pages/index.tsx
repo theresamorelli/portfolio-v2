@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import { Intro } from 'components/intro/Intro';
+import Navbar from 'components/navbar/index';
 import About from 'components/about/About';
 import Projects from 'components/projects/Projects';
 import Contact from 'components/contact/Contact';
@@ -11,12 +12,16 @@ export default () => (
   <>
     <Helmet title="Theresa Morelli" />
 
-    <Intro name="Theresa Morelli" title="developer, explorer, creator"></Intro>
+    <Navbar />
+
+    <Intro />
 
     <About />
 
     <Projects />
 
     <Contact />
+
+    <div id="modal-container"  />
   </>
 );

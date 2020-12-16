@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import Sketch from 'react-p5';
 import p5Types from 'p5';
 
-import useWindowDimensions from '../../hooks/use-window-dimensions';
-import opacityHexCodes from '../../utils/opacity-hex-codes';
-import colors from '../../utils/tree-colors';
+import useWindowDimensions from 'hooks/use-window-dimensions';
+import opacityHexCodes from 'utils/opacity-hex-codes';
+import colors from 'utils/tree-colors';
 
 const TreesAnimation: FC = () => {
   let { width, height } = useWindowDimensions();

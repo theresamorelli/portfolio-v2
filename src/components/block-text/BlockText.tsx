@@ -25,7 +25,7 @@ const Heading = styled.h3`
 
   margin-bottom: 10px;
 
-  font-family: ${variables.font.familyHeading};
+  font-family: ${variables.fonts.heading};
 `;
 
 const Description = styled.p`

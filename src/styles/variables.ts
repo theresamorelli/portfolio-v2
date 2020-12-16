@@ -11,22 +11,23 @@ export const variables = {
 
   // page dimensions
   pageWidth: '1290px',
-  pageLimit: () => math(`${variables.pageWidth} + ${variables.breakpoints.lg.gutter} * 2px`),
+  pageLimit: () =>
+    math(`${variables.pageWidth} + ${variables.breakpoints.lg.gutter} * 2px`),
 
   // fonts
-  font: {
-    family: '"Open Sans", sans-serif',
-    familyHeading: '"Fredericka the Great", "Open Sans", sans-serif',
+  fonts: {
+    heading: '"Playfair Display", sans-serif',
+    primary: '"Open Sans", sans-serif',
     size: '16px',
     sizeMin: '13px',
-    weight: 300,
     lineHeight: 1.5,
   },
 
   // colors
   colors: {
-    primary: '#F5BB00',
-    font: '#333',
+    primary: '#333',
+    accent: '#7b52a1',
+    title: '#666',
     background: '#fff',
     placeholder: '#ddd',
   },

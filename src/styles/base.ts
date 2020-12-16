@@ -66,9 +66,8 @@ export const Styles = createGlobalStyle`
 
     margin: 0;
 
-    font-family: ${variables.font.family};
-    line-height: ${variables.font.lineHeight};
-    font-weight: ${variables.font.weight};
+    font-family: ${variables.fonts.primary};
+    line-height: ${variables.fonts.lineHeight};
 
     /* iOS on orientation change */
     text-size-adjust: 100%;
@@ -94,53 +93,35 @@ export const Styles = createGlobalStyle`
 
   a {
     padding: 0 7px;
-    color: black;
-    text-decoration-color: #FF3722;
-
+    color: #333;
+    text-decoration:none;
+    /* text-decoration-color: #FF3722; */
     transition: color 0.4s;
     transition: background 0.4s;
   }
 
   a:hover {
-    background: #FF3722;
-    color: white;
-    text-decoration: none;
+    background: ${variables.colors.accent};
+    color: #fff;
+    /* text-decoration: none; */
   }
 
-canvas:after {
-  content  : "";
-  position : absolute;
-  z-index  : 1;
-  bottom   : 0;
-  left     : 0;
-  pointer-events   : none;
-  background-image : linear-gradient(to bottom, 
-                    rgba(255,255,255, 0), 
-                    rgba(255,255,255, 1) 90%);
-  width    : 100%;
-  height   : 4em;
+
+.p5Canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-  .shadow {
-    -webkit-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 10px 20px -2px rgba(0, 0, 0, 0.5);
-  }
-
-  .p5Canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  .fade-in {
-  animation: fadeIn ease 5s;
-  -webkit-animation: fadeIn ease 5s;
-  -moz-animation: fadeIn ease 5s;
-  -o-animation: fadeIn ease 5s;
-  -ms-animation: fadeIn ease 5s;
+.fade-in {
+animation: fadeIn ease 10s;
+-webkit-animation: fadeIn ease 10s;
+-moz-animation: fadeIn ease 10s;
+-o-animation: fadeIn ease 10s;
+-ms-animation: fadeIn ease 10s;
 }
+
 @keyframes fadeIn {
   0% {
     opacity:0;
@@ -184,5 +165,35 @@ canvas:after {
   100% {
     opacity:1;
   }
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  font-size: 1.3em;
+  color: #000;
+  font-family: var(--accent-font);
+  font-weight: 600;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 50px;
+  font-family: var(--accent-font);
+  color: #fff;
+  transition: 1s;
+}
+
+.navbar-dark .navbar-nav.nav-info-links .nav-link {
+  color: #d8d8d8;
+}
+
+.nav-info-links {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 5;
+  font-size: 17px;
+  font-weight: 400;
 }
 `;
