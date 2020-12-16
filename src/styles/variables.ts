@@ -27,7 +27,7 @@ export const variables = {
   colors: {
     primary: '#333',
     accent: '#7b52a1',
-    title: '#666',
+    title: '#000',
     background: '#fff',
     placeholder: '#ddd',
   },

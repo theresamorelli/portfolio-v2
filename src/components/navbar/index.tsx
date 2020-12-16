@@ -31,6 +31,7 @@ const NavBar = styled.nav`
   background: #fff;
 
   @media (max-width: 700px) {
+    justify-content: center;
     padding: 15px 20px;
   }
 `;
@@ -137,17 +138,7 @@ function Navbar() {
             <NameContainer className="fade-in">Theresa Morelli</NameContainer>
           </AnchorLink>
         </div>
-        {width < 700 ? (
-          <button
-            className="navbar-toggler fade-in"
-            type="button"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            onClick={handleDropdownClick}
-          >
-            <span className="navbar-toggler-icon">HI</span>
-          </button>
-        ) : (
+        {width > 700 && (
           <div className="nav-right navbar-collapse collapsible-navbar fade-in">
             <ul className="nav-info-links navbar-nav">
               {navInfoLinks.map((link, i) => (
@@ -161,7 +152,7 @@ function Navbar() {
                   </AnchorLink>
                 </NavItem>
               ))}
-            </ul>
+            </ul> 
           </div>
         )}
       </NavBar>
