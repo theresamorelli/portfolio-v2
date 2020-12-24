@@ -2,12 +2,12 @@ import React, { FC } from 'react';
 import Sketch from 'react-p5';
 import p5Types from 'p5';
 
-import useWindowDimensions from 'hooks/use-window-dimensions';
+import { useWindowSize } from 'react-recipes';
 import opacityHexCodes from 'utils/opacity-hex-codes';
 import colors from 'utils/tree-colors';
 
 const TreesAnimation: FC = () => {
-  let { width, height } = useWindowDimensions();
+  let { width, height } = useWindowSize();
   let currentColor: string;
   let branchLength: number;
   let numTreesDrawn = 0;

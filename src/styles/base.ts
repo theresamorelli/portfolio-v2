@@ -115,11 +115,11 @@ export const Styles = createGlobalStyle`
 }
 
 .fade-in {
-animation: fadeIn ease 10s;
--webkit-animation: fadeIn ease 10s;
--moz-animation: fadeIn ease 10s;
--o-animation: fadeIn ease 10s;
--ms-animation: fadeIn ease 10s;
+animation: fadeIn ease 5s;
+-webkit-animation: fadeIn ease 5s;
+-moz-animation: fadeIn ease 5s;
+-o-animation: fadeIn ease 5s;
+-ms-animation: fadeIn ease 5s;
 }
 
 @keyframes fadeIn {
