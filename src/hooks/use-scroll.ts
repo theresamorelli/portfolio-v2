@@ -53,10 +53,12 @@ const useScroll = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', listener);
-    return () => {
-      window.removeEventListener('scroll', listener);
-    };
+    if (typeof window !== undefined) {
+      window.addEventListener('scroll', listener);
+      return () => {
+        window.removeEventListener('scroll', listener);
+      };
+    }
   });
 
   return {
