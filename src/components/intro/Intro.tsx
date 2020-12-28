@@ -1,18 +1,11 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import { responsiveFont } from 'styles/utils';
-import { variables } from 'styles/variables';
 import { Container } from 'components/container/Container';
 import { Row } from 'components/grid/Row';
-import Title from 'components/sectiontitle/SectionTitle';
-import { ILink } from 'components/link/Link';
-import TreesAnimation from './TreesAnimation';
 
-// interface IntroProps {
-//   name: string;
-//   title: string;
-// }
+import loadable from '@loadable/component';
+const TreesAnimation = loadable(() => import('./TreesAnimation'));
 
 const Wrapper = styled.div`
   display: flex;
@@ -27,39 +20,12 @@ const Wrapper = styled.div`
   /* width: min-content; */
 `;
 
-const LargeTitle = styled(Title)`
-  font-size: ${responsiveFont(45, 70)};
-  font-family: ${variables.fonts.heading};
-  /* transition: all 10s ease-in;
-  text-shadow: 1px 1px grey; */
-`;
-
-const NavContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  font-family: ${variables.fonts.primary};
-  font-size: ${responsiveFont(25, 33)};
-
-  @media (max-width: 500px) {
-    flex-direction: column;
-  }
-`;
-
 export const Intro: FC = () => {
   return (
     <Container id="home">
       <Wrapper>
         <Row>
-          <div>
-            <TreesAnimation />
-            {/* <LargeTitle className="fade-in">{name}</LargeTitle> */}
-            {/* <NavContainer>
-              <ILink to="#about">About</ILink>
-              <ILink to="#projects">Projects</ILink>
-              <ILink to="#contact">Contact</ILink>
-            </NavContainer> */}
-          </div>
+          <TreesAnimation />
         </Row>
       </Wrapper>
     </Container>

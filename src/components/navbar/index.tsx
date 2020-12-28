@@ -98,7 +98,6 @@ const NavBar = styled.nav`
   text-align: center;
   padding: 15px 35px;
   width: 100%;
-  max-width: 1200px;
   max-height: 80px;
   top: 0;
   transition: top 0.5s, max-height 0.5s;

@@ -46,7 +46,7 @@ export default ({ children }: AppLayoutProps) => (
       ></link>
       <script
         src="https://kit.fontawesome.com/b85d416941.js"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></script>
     </Helmet>
 

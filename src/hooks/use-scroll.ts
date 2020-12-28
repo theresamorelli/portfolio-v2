@@ -53,7 +53,7 @@ const useScroll = () => {
   };
 
   useEffect(() => {
-    if (typeof window !== undefined) {
+    if (typeof window !== 'undefined') {
       window.addEventListener('scroll', listener);
       return () => {
         window.removeEventListener('scroll', listener);
