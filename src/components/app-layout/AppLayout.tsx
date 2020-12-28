@@ -24,7 +24,10 @@ export default ({ children }: AppLayoutProps) => (
   <>
     <Helmet>
       {/* Global site tag (gtag.js) - Google Analytics */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157580455-1"></script>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-157580455-1"
+      ></script>
       <script>
         {`
           window.dataLayer = window.dataLayer || [];
@@ -34,14 +37,17 @@ export default ({ children }: AppLayoutProps) => (
         `}
       </script>
       <link
-        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap"
         rel="stylesheet"
       />
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
       ></link>
-      <script src="https://kit.fontawesome.com/b85d416941.js" crossorigin="anonymous"></script>
+      <script
+        src="https://kit.fontawesome.com/b85d416941.js"
+        crossOrigin="anonymous"
+      ></script>
     </Helmet>
 
     <Styles />
@@ -51,12 +57,18 @@ export default ({ children }: AppLayoutProps) => (
 
       <Footer
         social={[
-          { icon: variables.fontAwesome.github, to: 'https://github.com/theresamorelli' },
+          {
+            icon: variables.fontAwesome.github,
+            to: 'https://github.com/theresamorelli',
+          },
           {
             icon: variables.fontAwesome.linkedin,
             to: 'https://www.linkedin.com/in/theresa-morelli',
           },
-          { icon: variables.fontAwesome.blog, to: 'https://medium.com/@theresamorelli' },
+          {
+            icon: variables.fontAwesome.blog,
+            to: 'https://medium.com/@theresamorelli',
+          },
         ]}
       />
 

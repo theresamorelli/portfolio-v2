@@ -8,8 +8,8 @@ export function responsiveFont(
   limit?: number | string,
 ) {
   return function responseFontFn(props) {
-    minSize = stripUnit(minSize || variables.font.sizeMin);
-    size = stripUnit(size || variables.font.size);
+    minSize = stripUnit(minSize || variables.fonts.sizeMin);
+    size = stripUnit(size || variables.fonts.size);
     limit = limit || variables.pageLimit();
     if (typeof limit === 'function') {
       limit = (limit as any)(props);

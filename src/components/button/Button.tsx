@@ -23,11 +23,12 @@ const base = css`
 
   cursor: pointer;
 
-  font-size: ${variables.font.size};
+  font-size: ${variables.fonts.size};
   text-align: center;
   text-decoration: none;
   line-height: 40px;
   vertical-align: middle;
+  border-radius: 3px;
 
   background-color: #343a40;
   color: #fff;
